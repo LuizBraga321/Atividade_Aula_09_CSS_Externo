@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projeto acadêmico de Desenvolvimento Front-End para Web: HTML, CSS externo, class, id, layout e responsividade.">
+    <title>HTML | Laboratório Front-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+    <div class="pagina">
+        <header id="topo" class="cabecalho">
+            <div class="cabecalho-interno">
+                <a class="marca" href="index.html" aria-label="Laboratório Front-End: voltar ao início">
+                    <span class="marca-icone" aria-hidden="true">&lt;/&gt;</span>
+                    <span class="marca-texto"><strong>Laboratório Front-End</strong><small>Desenvolvimento Front-End
+                            para Web</small></span>
+                </a>
+                <span class="cabecalho-selo">HTML + CSS • Aula 09</span>
+            </div>
+        </header>
+        <div class="layout">
+            <aside class="barra-lateral" aria-label="Navegação do site">
+                <nav id="menu-principal" aria-label="Menu principal">
+                    <p class="menu-titulo">NAVEGAÇÃO</p>
+                    <ul class="menu-lista">
+                        <li><a href="index.html"><span class="menu-numero">01</span><span>Início</span></a></li>
+                        <li><a href="html.html" aria-current="page"><span
+                                    class="menu-numero">02</span><span>HTML</span></a></li>
+                        <li><a href="css.html"><span class="menu-numero">03</span><span>CSS externo</span></a></li>
+                        <li><a href="div.html"><span class="menu-numero">04</span><span>DIV e Layout</span></a></li>
+                        <li><a href="textos.html"><span class="menu-numero">05</span><span>Estilização de
+                                    textos</span></a></li>
+                    </ul>
+                </nav>
+                <div class="nota-lateral">
+                    <span class="nota-lateral-marcador">PROJETO PRÁTICO</span>
+                    <p>Uma evolução da atividade anterior, agora com <strong>CSS externo</strong>, seletores e layout
+                        responsivo.</p>
+                </div>
+            </aside>
+            <main id="conteudo" tabindex="-1">
+                <section class="intro-pagina"><span class="etiqueta">01 • FUNDAMENTOS</span>
+                    <h1>HTML: a estrutura da página</h1>
+                    <p>HTML é a linguagem de marcação que define o que aparece em um site. O CSS, por sua vez, decide
+                        como esses elementos vão ser apresentados.</p>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="semantica-titulo">
+                    <h2 id="semantica-titulo">Uma página bem organizada</h2>
+                    <p>Os elementos semânticos ajudam a separar as partes do documento de acordo com a função de cada
+                        uma.</p>
+                    <div class="grade-cartoes grade-3">
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">&lt;header&gt;</span>
+                            <h3>Cabeçalho</h3>
+                            <p>Identificação do site ou de uma seção.</p>
+                        </article>
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">&lt;nav&gt;</span>
+                            <h3>Navegação</h3>
+                            <p>Conjunto de links para outras páginas.</p>
+                        </article>
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">&lt;main&gt;</span>
+                            <h3>Conteúdo</h3>
+                            <p>Assunto principal de cada página.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="estrutura-titulo">
+                    <h2 id="estrutura-titulo">Exemplo de estrutura HTML</h2>
+                    <p>Este exemplo usa as tags básicas e inclui a conexão com o arquivo CSS externo:</p>
+                    <pre class="bloco-codigo"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Meu site&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;Meu cabeçalho&lt;/header&gt;
+    &lt;nav&gt;Menu de navegação&lt;/nav&gt;
+    &lt;main&gt;Conteúdo principal&lt;/main&gt;
+    &lt;footer&gt;Rodapé&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+                <div class="aviso"><strong>Observe no projeto:</strong> o cabeçalho, o menu e o rodapé aparecem em todas
+                    as páginas; o conteúdo principal muda conforme o link escolhido.</div>
+            </main>
+        </div>
+        <footer class="rodape">
+            <span>Atividade Aula 09 • Desenvolvimento Front-End para Web</span>
+            <a href="#topo">Voltar ao topo ↑</a>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projeto acadêmico de Desenvolvimento Front-End para Web: HTML, CSS externo, class, id, layout e responsividade.">
+    <title>DIV e Layout | Laboratório Front-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+    <div class="pagina">
+        <header id="topo" class="cabecalho">
+            <div class="cabecalho-interno">
+                <a class="marca" href="index.html" aria-label="Laboratório Front-End: voltar ao início">
+                    <span class="marca-icone" aria-hidden="true">&lt;/&gt;</span>
+                    <span class="marca-texto"><strong>Laboratório Front-End</strong><small>Desenvolvimento Front-End
+                            para Web</small></span>
+                </a>
+                <span class="cabecalho-selo">HTML + CSS • Aula 09</span>
+            </div>
+        </header>
+        <div class="layout">
+            <aside class="barra-lateral" aria-label="Navegação do site">
+                <nav id="menu-principal" aria-label="Menu principal">
+                    <p class="menu-titulo">NAVEGAÇÃO</p>
+                    <ul class="menu-lista">
+                        <li><a href="index.html"><span class="menu-numero">01</span><span>Início</span></a></li>
+                        <li><a href="html.html"><span class="menu-numero">02</span><span>HTML</span></a></li>
+                        <li><a href="css.html"><span class="menu-numero">03</span><span>CSS externo</span></a></li>
+                        <li><a href="div.html" aria-current="page"><span class="menu-numero">04</span><span>DIV e
+                                    Layout</span></a></li>
+                        <li><a href="textos.html"><span class="menu-numero">05</span><span>Estilização de
+                                    textos</span></a></li>
+                    </ul>
+                </nav>
+                <div class="nota-lateral">
+                    <span class="nota-lateral-marcador">PROJETO PRÁTICO</span>
+                    <p>Uma evolução da atividade anterior, agora com <strong>CSS externo</strong>, seletores e layout
+                        responsivo.</p>
+                </div>
+            </aside>
+            <main id="conteudo" tabindex="-1">
+                <section class="intro-pagina"><span class="etiqueta">03 • ORGANIZAÇÃO</span>
+                    <h1>DIV, layout e responsividade</h1>
+                    <p>O elemento <code>&lt;div&gt;</code> ajuda a agrupar partes da página. Com CSS, esses grupos podem
+                        receber tamanho, cor, espaço e posição.</p>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="layout-titulo">
+                    <h2 id="layout-titulo">Como este site foi organizado?</h2>
+                    <p>Nas telas maiores, o menu aparece ao lado do conteúdo. Nas telas pequenas, ele passa para cima do
+                        conteúdo.</p>
+                    <div class="diagrama-layout" aria-label="Diagrama ilustrativo do layout">
+                        <div class="diagrama-cabecalho">HEADER</div>
+                        <div class="diagrama-corpo">
+                            <div class="diagrama-menu">MENU</div>
+                            <div class="diagrama-conteudo">CONTEÚDO</div>
+                        </div>
+                        <div class="diagrama-rodape">FOOTER</div>
+                    </div>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="flex-titulo">
+                    <h2 id="flex-titulo">O Flexbox posiciona os elementos</h2>
+                    <p>Neste projeto, <code>display: flex</code> organiza o menu lateral e o conteúdo. O
+                        <code>gap</code> controla os espaços entre os cartões.</p>
+                    <pre class="bloco-codigo"><code>.layout {
+    display: flex;
+}
+.grade-cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}</code></pre>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="espacamento-titulo">
+                    <h2 id="espacamento-titulo">Margin e padding</h2>
+                    <div class="grade-cartoes grade-2">
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">MARGIN</span>
+                            <h3>Espaço do lado de fora</h3>
+                            <p>Afasta um elemento dos demais.</p>
+                            <pre class="mini-codigo"><code>margin: 20px;</code></pre>
+                        </article>
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">PADDING</span>
+                            <h3>Espaço do lado de dentro</h3>
+                            <p>Afasta o conteúdo das bordas do elemento.</p>
+                            <pre class="mini-codigo"><code>padding: 20px;</code></pre>
+                        </article>
+                    </div>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="responsivo-titulo">
+                    <h2 id="responsivo-titulo">Ajuste para telas menores</h2>
+                    <p>Usamos uma <em>media query</em> para reorganizar o layout no celular:</p>
+                    <pre class="bloco-codigo"><code>@media (max-width: 780px) {
+    .layout {
+        flex-direction: column;
+    }
+}</code></pre>
+                </section>
+                <div class="aviso"><strong>Faça o teste:</strong> diminua a largura da janela do navegador para observar
+                    o menu e os cartões se adaptando automaticamente.</div>
+            </main>
+        </div>
+        <footer class="rodape">
+            <span>Atividade Aula 09 • Desenvolvimento Front-End para Web</span>
+            <a href="#topo">Voltar ao topo ↑</a>
+        </footer>
+    </div>
+</body>
+
+</html>

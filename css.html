@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projeto acadêmico de Desenvolvimento Front-End para Web: HTML, CSS externo, class, id, layout e responsividade.">
+    <title>CSS externo | Laboratório Front-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+    <div class="pagina">
+        <header id="topo" class="cabecalho">
+            <div class="cabecalho-interno">
+                <a class="marca" href="index.html" aria-label="Laboratório Front-End: voltar ao início">
+                    <span class="marca-icone" aria-hidden="true">&lt;/&gt;</span>
+                    <span class="marca-texto"><strong>Laboratório Front-End</strong><small>Desenvolvimento Front-End
+                            para Web</small></span>
+                </a>
+                <span class="cabecalho-selo">HTML + CSS • Aula 09</span>
+            </div>
+        </header>
+        <div class="layout">
+            <aside class="barra-lateral" aria-label="Navegação do site">
+                <nav id="menu-principal" aria-label="Menu principal">
+                    <p class="menu-titulo">NAVEGAÇÃO</p>
+                    <ul class="menu-lista">
+                        <li><a href="index.html"><span class="menu-numero">01</span><span>Início</span></a></li>
+                        <li><a href="html.html"><span class="menu-numero">02</span><span>HTML</span></a></li>
+                        <li><a href="css.html" aria-current="page"><span class="menu-numero">03</span><span>CSS
+                                    externo</span></a></li>
+                        <li><a href="div.html"><span class="menu-numero">04</span><span>DIV e Layout</span></a></li>
+                        <li><a href="textos.html"><span class="menu-numero">05</span><span>Estilização de
+                                    textos</span></a></li>
+                    </ul>
+                </nav>
+                <div class="nota-lateral">
+                    <span class="nota-lateral-marcador">PROJETO PRÁTICO</span>
+                    <p>Uma evolução da atividade anterior, agora com <strong>CSS externo</strong>, seletores e layout
+                        responsivo.</p>
+                </div>
+            </aside>
+            <main id="conteudo" tabindex="-1">
+                <section class="intro-pagina"><span class="etiqueta">02 • ESTILOS</span>
+                    <h1>CSS externo e seletores</h1>
+                    <p>Na Aula 09, o destaque é separar aparência e estrutura. Um único arquivo <code>style.css</code>
+                        contém as regras que todas as páginas HTML compartilham.</p>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="externo-titulo">
+                    <h2 id="externo-titulo">Como conectar o CSS ao HTML?</h2>
+                    <p>Dentro do <code>&lt;head&gt;</code> de cada página existe esta linha:</p>
+                    <pre class="bloco-codigo"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                    <p>O navegador lê <code>style.css</code> e aplica as regras ao conteúdo. Se mudarmos a cor do
+                        cabeçalho no CSS, a alteração aparece em todas as páginas do site.</p>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="seletores-titulo">
+                    <h2 id="seletores-titulo">Três maneiras de selecionar elementos</h2>
+                    <div class="grade-cartoes grade-3">
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">SELETOR DE TAG</span>
+                            <h3><code>p</code></h3>
+                            <p>Aplica o estilo a todos os parágrafos da página.</p>
+                            <pre class="mini-codigo"><code>p {
+  line-height: 1.7;
+}</code></pre>
+                        </article>
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">SELETOR DE CLASSE</span>
+                            <h3><code>.cartao</code></h3>
+                            <p>Pode ser reutilizado em diversos elementos.</p>
+                            <pre class="mini-codigo"><code>.cartao {
+  padding: 24px;
+}</code></pre>
+                        </article>
+                        <article class="cartao cartao-compacto"><span class="cartao-numero">SELETOR DE ID</span>
+                            <h3><code>#conteudo</code></h3>
+                            <p>Representa um identificador único na página.</p>
+                            <pre class="mini-codigo"><code>#conteudo {
+  min-width: 0;
+}</code></pre>
+                        </article>
+                    </div>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="comparacao-titulo">
+                    <h2 id="comparacao-titulo">Class ou ID?</h2>
+                    <div class="comparacao">
+                        <div class="comparacao-item"><strong><code>class="cartao"</code></strong>
+                            <p>Usada em vários cartões deste site: estilos que se repetem.</p>
+                        </div>
+                        <div class="comparacao-item"><strong><code>id="menu-principal"</code></strong>
+                            <p>Usado uma única vez em cada página para identificar a navegação.</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="aviso"><strong>Teste prático:</strong> abra o arquivo <code>style.css</code>, localize
+                    <code>.cartao</code> e altere sua borda. Todos os cartões que utilizam essa classe mudarão juntos.
+                </div>
+            </main>
+        </div>
+        <footer class="rodape">
+            <span>Atividade Aula 09 • Desenvolvimento Front-End para Web</span>
+            <a href="#topo">Voltar ao topo ↑</a>
+        </footer>
+    </div>
+</body>
+
+</html>

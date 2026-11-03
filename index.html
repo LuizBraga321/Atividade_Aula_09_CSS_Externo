@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projeto acadêmico de Desenvolvimento Front-End para Web: HTML, CSS externo, class, id, layout e responsividade.">
+    <title>Início | Laboratório Front-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+    <div class="pagina">
+        <header id="topo" class="cabecalho">
+            <div class="cabecalho-interno">
+                <a class="marca" href="index.html" aria-label="Laboratório Front-End: voltar ao início">
+                    <span class="marca-icone" aria-hidden="true">&lt;/&gt;</span>
+                    <span class="marca-texto"><strong>Laboratório Front-End</strong><small>Desenvolvimento Front-End
+                            para Web</small></span>
+                </a>
+                <span class="cabecalho-selo">HTML + CSS • Aula 09</span>
+            </div>
+        </header>
+        <div class="layout">
+            <aside class="barra-lateral" aria-label="Navegação do site">
+                <nav id="menu-principal" aria-label="Menu principal">
+                    <p class="menu-titulo">NAVEGAÇÃO</p>
+                    <ul class="menu-lista">
+                        <li><a href="index.html" aria-current="page"><span
+                                    class="menu-numero">01</span><span>Início</span></a></li>
+                        <li><a href="html.html"><span class="menu-numero">02</span><span>HTML</span></a></li>
+                        <li><a href="css.html"><span class="menu-numero">03</span><span>CSS externo</span></a></li>
+                        <li><a href="div.html"><span class="menu-numero">04</span><span>DIV e Layout</span></a></li>
+                        <li><a href="textos.html"><span class="menu-numero">05</span><span>Estilização de
+                                    textos</span></a></li>
+                    </ul>
+                </nav>
+                <div class="nota-lateral">
+                    <span class="nota-lateral-marcador">PROJETO PRÁTICO</span>
+                    <p>Uma evolução da atividade anterior, agora com <strong>CSS externo</strong>, seletores e layout
+                        responsivo.</p>
+                </div>
+            </aside>
+            <main id="conteudo" tabindex="-1">
+                <section class="hero" aria-labelledby="titulo-inicio">
+                    <div class="hero-conteudo">
+                        <span class="sobretitulo">EVOLUÇÃO DO PROJETO • AULA 09</span>
+                        <h1 id="titulo-inicio">HTML organiza.<br><span>CSS transforma.</span></h1>
+                        <p>Bem-vindo ao meu laboratório de estudos! Este site reúne os conteúdos trabalhados em sala e
+                            demonstra, na prática, o uso de um único arquivo CSS para estilizar várias páginas.</p>
+                        <div class="acoes"><a class="botao botao-principal" href="css.html">Explorar CSS externo <span
+                                    aria-hidden="true">→</span></a><a class="botao botao-secundario"
+                                href="div.html">Conhecer o layout</a></div>
+                    </div>
+                    <div class="hero-painel" aria-label="Resumo dos conceitos aplicados">
+                        <span class="painel-legenda">ARQUIVOS DO PROJETO</span>
+                        <div class="arquivo"><span class="arquivo-ponto"></span> index.html <span>HTML</span></div>
+                        <div class="arquivo"><span class="arquivo-ponto"></span> html.html <span>HTML</span></div>
+                        <div class="arquivo"><span class="arquivo-ponto"></span> css.html <span>HTML</span></div>
+                        <div class="arquivo"><span class="arquivo-ponto"></span> style.css <span>CSS</span></div>
+                        <p class="painel-rodape">1 folha de estilo → todas as páginas</p>
+                    </div>
+                </section>
+                <section class="secao" aria-labelledby="resumo-titulo">
+                    <div class="secao-cabecalho">
+                        <div><span class="etiqueta">O QUE TEM NESTE SITE</span>
+                            <h2 id="resumo-titulo">Conteúdos do projeto</h2>
+                        </div>
+                        <p>Selecione um assunto para ver um exemplo real.</p>
+                    </div>
+                    <div class="grade-cartoes">
+                        <article class="cartao"><span class="cartao-numero">01 / ESTRUTURA</span>
+                            <h3><a href="html.html">HTML semântico</a></h3>
+                            <p>Elementos que organizam títulos, navegação, seções e conteúdo.</p><a class="cartao-link"
+                                href="html.html">Ver conteúdo <span aria-hidden="true">→</span></a>
+                        </article>
+                        <article class="cartao"><span class="cartao-numero">02 / ESTILO</span>
+                            <h3><a href="css.html">CSS externo</a></h3>
+                            <p>Folha de estilos separada, seletores de tag, class e id.</p><a class="cartao-link"
+                                href="css.html">Ver conteúdo <span aria-hidden="true">→</span></a>
+                        </article>
+                        <article class="cartao"><span class="cartao-numero">03 / ORGANIZAÇÃO</span>
+                            <h3><a href="div.html">DIV e Flexbox</a></h3>
+                            <p>Organização do layout, espaçamentos e adaptação ao celular.</p><a class="cartao-link"
+                                href="div.html">Ver conteúdo <span aria-hidden="true">→</span></a>
+                        </article>
+                        <article class="cartao"><span class="cartao-numero">04 / TIPOGRAFIA</span>
+                            <h3><a href="textos.html">Estilização de textos</a></h3>
+                            <p>Fontes, cores, tamanhos, alinhamentos e espaçamento entre linhas.</p><a
+                                class="cartao-link" href="textos.html">Ver conteúdo <span
+                                    aria-hidden="true">→</span></a>
+                        </article>
+                    </div>
+                </section>
+                <section class="faixa-info" aria-labelledby="objetivo-titulo">
+                    <div class="icone-faixa" aria-hidden="true">✓</div>
+                    <div>
+                        <h2 id="objetivo-titulo">O objetivo da atividade</h2>
+                        <p>Demonstrar o aprendizado da Aula 09 com páginas HTML conectadas ao mesmo
+                            <code>style.css</code>, classes reutilizáveis, identificadores únicos e um layout que
+                            funciona em telas menores.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer class="rodape">
+            <span>Atividade Aula 09 • Desenvolvimento Front-End para Web</span>
+            <a href="#topo">Voltar ao topo ↑</a>
+        </footer>
+    </div>
+</body>
+
+</html>

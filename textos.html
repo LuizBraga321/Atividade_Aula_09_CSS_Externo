@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projeto acadêmico de Desenvolvimento Front-End para Web: HTML, CSS externo, class, id, layout e responsividade.">
+    <title>Estilização de textos | Laboratório Front-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+    <div class="pagina">
+        <header id="topo" class="cabecalho">
+            <div class="cabecalho-interno">
+                <a class="marca" href="index.html" aria-label="Laboratório Front-End: voltar ao início">
+                    <span class="marca-icone" aria-hidden="true">&lt;/&gt;</span>
+                    <span class="marca-texto"><strong>Laboratório Front-End</strong><small>Desenvolvimento Front-End
+                            para Web</small></span>
+                </a>
+                <span class="cabecalho-selo">HTML + CSS • Aula 09</span>
+            </div>
+        </header>
+        <div class="layout">
+            <aside class="barra-lateral" aria-label="Navegação do site">
+                <nav id="menu-principal" aria-label="Menu principal">
+                    <p class="menu-titulo">NAVEGAÇÃO</p>
+                    <ul class="menu-lista">
+                        <li><a href="index.html"><span class="menu-numero">01</span><span>Início</span></a></li>
+                        <li><a href="html.html"><span class="menu-numero">02</span><span>HTML</span></a></li>
+                        <li><a href="css.html"><span class="menu-numero">03</span><span>CSS externo</span></a></li>
+                        <li><a href="div.html"><span class="menu-numero">04</span><span>DIV e Layout</span></a></li>
+                        <li><a href="textos.html" aria-current="page"><span
+                                    class="menu-numero">05</span><span>Estilização de textos</span></a></li>
+                    </ul>
+                </nav>
+                <div class="nota-lateral">
+                    <span class="nota-lateral-marcador">PROJETO PRÁTICO</span>
+                    <p>Uma evolução da atividade anterior, agora com <strong>CSS externo</strong>, seletores e layout
+                        responsivo.</p>
+                </div>
+            </aside>
+            <main id="conteudo" tabindex="-1">
+                <section class="intro-pagina"><span class="etiqueta">04 • TIPOGRAFIA</span>
+                    <h1>Estilização de textos com CSS</h1>
+                    <p>Um site precisa ser organizado, mas também fácil de ler. As propriedades de tipografia controlam
+                        fontes, tamanhos, cores e espaçamentos.</p>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="amostras-titulo">
+                    <h2 id="amostras-titulo">Textos com estilos diferentes</h2>
+                    <div class="amostras">
+                        <div class="amostra"><span class="cartao-numero">FONT-FAMILY</span>
+                            <p class="amostra-fonte">Uma fonte clara e legível.</p><small>Arial, Helvetica,
+                                sans-serif</small>
+                        </div>
+                        <div class="amostra"><span class="cartao-numero">FONT-WEIGHT</span>
+                            <p class="amostra-peso">Texto em negrito para destacar informações.</p><small>font-weight:
+                                700</small>
+                        </div>
+                        <div class="amostra"><span class="cartao-numero">FONT-STYLE</span>
+                            <p class="amostra-italico">Uma observação com estilo itálico.</p><small>font-style:
+                                italic</small>
+                        </div>
+                        <div class="amostra"><span class="cartao-numero">LETTER-SPACING</span>
+                            <p class="amostra-espacamento">LETRAS ESPAÇADAS</p><small>letter-spacing: 3px</small>
+                        </div>
+                    </div>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="props-titulo">
+                    <h2 id="props-titulo">Propriedades importantes</h2>
+                    <div class="tabela-rolagem">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Propriedade</th>
+                                    <th scope="col">O que faz</th>
+                                    <th scope="col">Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><code>font-family</code></th>
+                                    <td>Escolhe a fonte.</td>
+                                    <td><code>Arial, sans-serif</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><code>font-size</code></th>
+                                    <td>Define o tamanho.</td>
+                                    <td><code>1.25rem</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><code>font-weight</code></th>
+                                    <td>Controla o peso.</td>
+                                    <td><code>700</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><code>color</code></th>
+                                    <td>Define a cor.</td>
+                                    <td><code>#193153</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><code>text-align</code></th>
+                                    <td>Alinha o texto.</td>
+                                    <td><code>center</code></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><code>line-height</code></th>
+                                    <td>Espaça as linhas.</td>
+                                    <td><code>1.7</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="secao secao-curta" aria-labelledby="codigo-titulo">
+                    <h2 id="codigo-titulo">Exemplo de CSS para parágrafos</h2>
+                    <pre class="bloco-codigo"><code>p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #34445b;
+}</code></pre>
+                </section>
+                <div class="aviso"><strong>Perceba:</strong> os textos desta página estão estilizados por classes no
+                    mesmo arquivo externo usado pelas outras páginas.</div>
+            </main>
+        </div>
+        <footer class="rodape">
+            <span>Atividade Aula 09 • Desenvolvimento Front-End para Web</span>
+            <a href="#topo">Voltar ao topo ↑</a>
+        </footer>
+    </div>
+</body>
+
+</html>
